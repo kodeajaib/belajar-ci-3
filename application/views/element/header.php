@@ -11,7 +11,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>/assets/css/bootstrap.min.css" rel="stylesheet">
-
+    
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
  
 
 
@@ -35,8 +37,8 @@
           <ul class="nav navbar-nav">
             <li class="<?php if(isset($active_home)){echo $active_home ;}?>"><a href="<?php echo base_url();?>">Home</a></li>
             <li class="<?php if(isset($active_about)){echo $active_about ;}?>"><a href="<?php echo base_url('about');?>">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-         
+            <li class="<?php if(isset($active_crud)){echo $active_crud ;}?>"><a href="<?php echo base_url('crud');?>">Crud</a></li>
+            
           </ul>
          
         </div><!--/.nav-collapse -->
